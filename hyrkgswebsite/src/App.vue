@@ -1,16 +1,19 @@
 <template>
-  <!-- <div id="app"> -->
+  <div id="app">
+    <MHeader/>
     <Test/>
-  <!-- </div> -->
+  </div>
 </template>
 
 <script>
 import Test from './components/Test.vue'
+import MHeader from './components/Header.vue'
 
 export default {
   name: 'App',
   components: {
-    Test
+    Test,
+    MHeader
   }
 }
 </script>
