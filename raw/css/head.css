@@ -1,0 +1,115 @@
+/* 背景颜色 */
+body{background-color: rgb(241, 242, 246)}
+/*====================导航*********/
+.header{
+	width:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:999;
+	height:50px;
+	padding: 0 30px;
+	background: rgba(255, 255, 255, 0);
+	box-shadow: 0px 0px 5px rgb(184, 184, 184);
+}
+
+
+/* 左侧logo
+.header .left{
+	width: 12%;
+} */
+.header .left a img{
+	height: 40px;
+	margin-top: 6px;
+}
+.header .left .img2{
+	display: none;
+}
+/*右侧*/
+.header .nav{
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+	height: 100%;
+	line-height: 50px;
+	display: block;
+}
+.header .navbar_nav li{
+	float:left;
+	position: relative;
+	display: block;
+}
+
+/* 选中后字体 */
+.header .navbar_nav li:after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #6a96bd;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.5s ease 0s;
+}
+
+
+.header .navbar_nav li:hover:after{
+    width: 100%;
+}
+
+/* 默认字体 */
+.header .navbar_nav li a{
+	text-decoration: none;
+	height: 100%;
+	padding: 0 25px;
+	display: block;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+	color: rgb(148, 148, 148);
+	font-size: 16px;
+}
+
+.header .navbar_nav li:hover a{
+	color: #6a96bd;
+}
+
+.header .navbar_nav li.active a{
+	color: #6a96bd;
+	font-weight: bold;
+}
+.header .navbar_nav li.active:hover:after{
+    width: 0%;
+}
+
+
+
+
+.header.on{
+	background: #fff;
+	border-bottom: 1px solid #ccc;
+}
+.header.on .left .img1{
+	display: none;
+}
+.header.on .left .img2{
+	display: block;
+}
+.header.on .navbar_nav li a{
+	color: #333;
+}
+.header.on .navbar_nav li:hover a{
+	color: #7692b7;
+}
+#navToggle{
+	display: none;
+}
+
+.banner{
+	width: 100%;
+}
+.banner img{
+	width: 100%;
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh">
+<!-- 头信息 -->
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>覃琳峰的小站</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/head.css" />
+  <link rel="stylesheet" href="css/body.css" />
+
+</head>
+
+<body>
+
+
+	
+
+	<!-- 导航 -->
+	<header class="header"> 
+		<div class="container clearfix"> 
+
+      <div class="offset-to-center">
+			<div class="left fl">
+				<a href="javascript:void(0)" ><img src="image/logo.png" alt="" class="img1" /></a>
+			</div>
+			
+			<!-- 导航按钮 -->
+			<div class="fr"> 
+				<ul class="nav navbar_nav" data-in="fadeInDown" data-out="fadeOutUp">
+				
+          <li id="index">
+						<a href="javascript:void(0)">首页</a>
+					</li>
+
+					<li id="article">
+						<a href="javascript:void(0)">文章</a>
+					</li>
+
+					<li id="product" class="active">
+						<a href="javascript:void(0)">作品</a>
+					</li>
+
+					<li id="comment">
+						<a href="javascript:void(0)">留言</a>
+					</li>
+
+					<li id="aboutme">
+						<a href="javascript:void(0)">关于我</a>
+					</li>
+
+					<li id="contact">
+						<a href="javascript:void(0)">联系方式</a>
+					</li>
+				</ul>
+			</div>
+    </div>
+			<!-- ??? -->
+			<a href="javascript:void(0)" id="navToggle">
+	            <span></span>
+	        </a>
+		</div>
+	</header>
+
+
+	<!-- 内容板块 -->
+<div class="job">
+ <div class="wrapper">
+  <div class="main-container">
+
+
+
+   <!-- 右侧内容窗口 -->
+   <div class="searched-jobs">
+    <div class="searched-bar">
+     <div class="searched-show">💥我的作品</div>
+     <!-- <div class="searched-sort">Sort by: <span class="post-time">Newest Post </span><span class="menu-icon">▼</span></div> -->
+    </div>
+    <div class="job-cards">
+
+
+      <div class="job-card-full shadow">
+        <div class="job-card-title">网站设计原稿</div>
+        <div class="job-card-subtitle">
+          现在的网站都太花里胡哨了，所以想做一个干净点的~
+        </div>
+        <div>
+        <img style="margin-top: 10px;" src="image/pic2.png">
+        </div>
+        <div class="job-detail-buttons">
+         <button class="search-buttons detail-button">📃</button>
+         <button class="search-buttons detail-button">🤠</button>
+        </div>
+       </div>
+
+     <div class="job-card-full shadow">
+      <img style="margin-top: 10px;" src="image/fastspigot-logo.png">
+
+      <div class="job-card-title">
+        这是一个帮助进行快速插件开发的控制反转(IoC)框架。是我所有开发经验的一个总结。
+      </div>
+
+      <div class="job-card-subtitle">
+        我自开发spigot（早期是bukkit）至今已经差不多两年时间，可以说是自我入门至今都在开发spigot。在两年中我一直都在开发一套能够帮助我进行快速开发的库或框架，实际上这已经是我第五版的开发工具了，但前四版都是云云STATIC方法，而在这版中我带入了设计与框架，并将之前的精华凝结于此，让其在效果上能有一个质上的飞跃。
+        <br>
+        <br>
+        <a href="https://github.com/HyrKG/FastSpigot">@Github: https://github.com/HyrKG/FastSpigot</a><br>
+        <a href="https://fastspigot.doc.hyrkg.cn/">@中文文档: https://fastspigot.doc.hyrkg.cn/</a><br>
+      </div>
+      <div class="job-detail-buttons">
+       <button class="search-buttons detail-button">💣</button>
+
+       
+
+      </div>
+     </div>
+
+     <div class="job-card-full shadow">
+      <div>
+      <img style="margin-top: 10px;" src="image/DSC_7468.JPG">
+      </div>
+      <div class="job-detail-buttons">
+       <button class="search-buttons detail-button">💫</button>
+      </div>
+     </div>
+
+
+   </div>
+
+
+  </div>
+ </div>
+</div>
+	
+  <script src="js/jquery.min.js"></script>	
+	<script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+
+  <script>
+    $("ul li").click(function(e){
+        var self = this;       
+
+        var p = self.parentNode.children;
+
+        for (var i = 0, pl = p.length; i < pl; i++) {
+            p[i].classList.remove("active");
+
+        }
+
+        self.classList.add("active");
+
+        var target = $(self).attr("id");
+        window.location.href = target+".html";
+
+    })
+  </script>
+
+</body>
+
+
+
+</html>
