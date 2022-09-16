@@ -15,6 +15,12 @@ module.exports = {
   entry: {
     app: './src/main.js'
   },
+  // 打包时不打包第三方
+  externals:{
+    'vue': "Vue",
+    "element-ui": 'ELEMENT'
+    // "vue-moment": "moment"
+  },
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
