@@ -4,10 +4,9 @@ const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 
-function resolve (dir) {
+function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
-
 
 
 module.exports = {
@@ -16,7 +15,7 @@ module.exports = {
     app: './src/main.js'
   },
   // 打包时不打包第三方
-  externals:{
+  externals: {
     'vue': "Vue",
     "element-ui": 'ELEMENT'
     // "vue-moment": "moment"

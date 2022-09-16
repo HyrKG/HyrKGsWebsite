@@ -3,9 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 // import {Button} from "element-ui"
-
 // 全局引入element-ui
 import ElementUI from 'element-ui';
+
 Vue.use(ElementUI);
 // Vue.use(Button)
 
@@ -14,6 +14,6 @@ Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  components: { App },
+  components: {App},
   template: '<App/>'
 })
