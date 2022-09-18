@@ -1,8 +1,17 @@
 <script lang="ts" setup>
-import {isDark, toggleDark} from '~/composables';</script>
+import {isDark, toggleDark} from '~/composables';
+import {ref} from 'vue'
+
+const activeIndex = ref('1')
+
+const handleSelect = (key: string, keyPath: string[]) => {
+  console.log(key, keyPath)
+
+}
+</script>
 
 <template>
-  <el-menu class="el-menu-demo" mode="horizontal">
+  <el-menu  :default-active="activeIndex" menu-trigger="click" class="el-menu-demo" mode="horizontal" @select="handleSelect">
     <!--    <el-menu-item index="1">HyrKG</el-menu-item>-->
 
     <div v-if="isDark">
@@ -14,9 +23,9 @@ import {isDark, toggleDark} from '~/composables';</script>
 
     <div class="flex-grow"/>
     <el-menu-item index="1">工单</el-menu-item>
-    <el-menu-item index="2">文档</el-menu-item>
-    <el-menu-item index="3">关于我</el-menu-item>
-    <el-menu-item  h="full" @click="toggleDark()">
+    <!--    <el-menu-item index="2">文档</el-menu-item>?-->
+    <el-menu-item index="2">关于我</el-menu-item>
+    <el-menu-item index="3" @click="toggleDark()">
       <button class="border-none w-full bg-transparent cursor-pointer" style="height: var(--ep-menu-item-height);">
         <i inline-flex i="dark:ep-moon ep-sunny"/>
       </button>

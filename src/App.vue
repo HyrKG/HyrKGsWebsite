@@ -111,13 +111,13 @@
 
 .right-card {
   padding: 20px 16px;
-  background-color: #fff;
+  background-color: var(--ep-bg-color);
   border-radius: 8px;
   cursor: pointer;
   -webkit-transition: .2s;
   transition: .2s;
   width: auto;
-  box-shadow: 0px 0px 20px rgb(228, 228, 228);
+  box-shadow: 0px 0px 10px rgb(228, 228, 228);
 
 }
 
@@ -150,6 +150,7 @@
   font-weight: 600;
   margin-top: 10px;
   font-size: 16px;
+  color: var(--ep-text-color-primary);;
 }
 
 @media screen and (max-width: 730px) {
