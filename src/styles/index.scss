@@ -3,7 +3,9 @@
 
  :root {
    //--ep-color-primary: red;
-   --vp-max-screen-width: 1362px;
+   //在此限制主要容器的最大宽度为1362，以保证居中的视觉效果
+   //ps. 关于1362，其实是我看到element-plus的官网是1362所以我也写1362!
+   --vp-max-screen-width: 1230px;
  }
 
 body {
