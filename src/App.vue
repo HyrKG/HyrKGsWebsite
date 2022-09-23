@@ -34,6 +34,27 @@
                     </button>
                   </div>
                 </div>
+
+
+                <div class="right-card ">
+                  <div class="job-card-title">
+                    色彩街头 / Alex Webb
+                  </div>
+                  <!--                  <div class="job-card-title">-->
+                  <!--                    达瓦和，不能不好。-->
+                  <!--                  </div>-->
+                  <img class="image-autofix" src="/src/assets/alexwebb_img1.png"/>
+
+                  <div class="button-container">
+                    <button class="search-buttons">
+                      🤠
+                    </button>
+                    <button class="search-buttons">
+                      😋
+                    </button>
+                  </div>
+                </div>
+
               </div>
 
             </div>
@@ -104,7 +125,7 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-column-gap: 25px;
-  grid-row-gap: 25px;
+  grid-row-gap: 10px;
   -webkit-animation: slideY .6s both;
   animation: slideY .6s both;
 }
@@ -118,7 +139,11 @@
   transition: .2s;
   width: auto;
   box-shadow: 0px 0px 10px rgb(228, 228, 228);
+  /*scale: 1.02;*/
+}
 
+.right-card:hover {
+  transform: scale(1.02);
 }
 
 .search-buttons {
@@ -132,8 +157,7 @@
   margin-top: 14px;
 }
 
-.search-buttons + .search-buttons
-{
+.search-buttons + .search-buttons {
   margin-left: 6px;
 }
 
@@ -153,12 +177,21 @@
   color: var(--ep-text-color-primary);;
 }
 
+.image-autofix {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
 @media screen and (max-width: 730px) {
   .el-main-left-container {
     display: none;
   }
-  .el-main-right-container
-  {
+
+  .el-main-right-container {
     padding-left: 0;
   }
 }
