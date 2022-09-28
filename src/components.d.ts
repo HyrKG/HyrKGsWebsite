@@ -8,6 +8,8 @@ declare module '@vue/runtime-core' {
     BaseHeader: typeof import('./components/layouts/BaseHeader.vue')['default']
     BaseSideInfobox: typeof import('./components/layouts/BaseSideInfobox.vue')['default']
     Card: typeof import('./components/containers/Card.vue')['default']
+    CardContainer: typeof import('./components/containers/CardContainer.vue')['default']
+    CardKeywordButton: typeof import('./components/containers/CardKeywordButton.vue')['default']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
     ElContainer: typeof import('element-plus/es')['ElContainer']
     ElHeader: typeof import('element-plus/es')['ElHeader']

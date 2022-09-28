@@ -1,10 +1,13 @@
 <template>
   <el-config-provider namespace="ep">
-
     <el-container class="operation-wrapper">
+
+      <!--      头部-->
       <el-header class="el-header">
         <BaseHeader/>
       </el-header>
+
+      <!--      内容容器-->
       <el-container>
         <el-main class="el-main">
           <div class="el-container flex-container">
@@ -19,44 +22,22 @@
 
             <div class="el-main-right-container">
               <!--                <HelloWorld/>-->
-              <div class="right-cards">
-                <div class="right-card ">
-                  <div class="job-card-title">
-                    尹心玥晚上好，不能不好。
-                  </div>
-
-                  <div class="button-container">
-                    <button class="search-buttons">
-                      🤠
-                    </button>
-                    <button class="search-buttons">
-                      😋
-                    </button>
-                  </div>
-                </div>
-
-
-                <div class="right-card ">
-                  <div class="job-card-title">
-                    色彩街头 / Alex Webb
-                  </div>
-                  <!--                  <div class="job-card-title">-->
-                  <!--                    达瓦和，不能不好。-->
-                  <!--                  </div>-->
+              <CardContainer>
+                <Card title="色彩街头 / Alex Webb">
                   <img class="image-autofix" src="/src/assets/alexwebb_img1.png"/>
 
-                  <div class="button-container">
-                    <button class="search-buttons">
-                      🤠
-                    </button>
-                    <button class="search-buttons">
-                      😋
-                    </button>
-                  </div>
-                </div>
-
-              </div>
-
+                  <template #footer>
+                    <card-keyword-button>🤠</card-keyword-button>
+                    <card-keyword-button>😋</card-keyword-button>
+                  </template>
+                </Card>
+                <Card title="早上好，不能不好">
+                  <template #footer>
+                    <card-keyword-button>🤠</card-keyword-button>
+                    <card-keyword-button>😋</card-keyword-button>
+                  </template>
+                </Card>
+              </CardContainer>
             </div>
           </div>
         </el-main>
@@ -120,62 +101,6 @@
   /*border: 1px solid red;*/
 }
 
-.right-cards {
-  /*padding-top: 20px;*/
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-column-gap: 25px;
-  grid-row-gap: 10px;
-  -webkit-animation: slideY .6s both;
-  animation: slideY .6s both;
-}
-
-.right-card {
-  padding: 20px 16px;
-  background-color: var(--ep-bg-color);
-  border-radius: 8px;
-  cursor: pointer;
-  -webkit-transition: .2s;
-  transition: .2s;
-  width: auto;
-  box-shadow: 0px 0px 10px rgb(228, 228, 228);
-  /*scale: 1.02;*/
-}
-
-.right-card:hover {
-  transform: scale(1.02);
-}
-
-.search-buttons {
-  border: none;
-  color: #fff;
-  background-color: #e1ebfb;
-  padding: 8px 10px;
-  border-radius: 6px;
-  font-size: 13px;
-  font-weight: 600;
-  margin-top: 14px;
-}
-
-.search-buttons + .search-buttons {
-  margin-left: 6px;
-}
-
-.detail-button {
-  background-color: #fff;
-  color: #0162ff;
-  font-size: 11px;
-  font-weight: 500;
-  padding: 6px 8px;
-  border-radius: 4px;
-}
-
-.job-card-title {
-  font-weight: 600;
-  margin-top: 10px;
-  font-size: 16px;
-  color: var(--ep-text-color-primary);;
-}
 
 .image-autofix {
   height: auto;
