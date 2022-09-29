@@ -31,12 +31,8 @@ const props = defineProps({
 })
 
 const hasTitle = computed(() => props.title)
-const hasContent = computed(() => {
-  return useSlots().default
-})
-const hasFooter = computed(() => {
-  return useSlots().footer
-})
+const hasContent = computed(() => useSlots().default)
+const hasFooter = computed(() => useSlots().footer)
 
 </script>
 

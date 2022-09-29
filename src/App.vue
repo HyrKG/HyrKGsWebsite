@@ -24,29 +24,26 @@
               <!--                <HelloWorld/>-->
               <CardContainer>
                 <Card title="色彩街头 / Alex Webb">
-                  <img class="image-autofix" src="/src/assets/alexwebb_img1.png"/>
+                  <img class="autofix smooth-border" src="/src/assets/alexwebb_img1.png"/>
                   <template #footer>
                     <card-keyword-button>🤠</card-keyword-button>
                     <card-keyword-button>😋</card-keyword-button>
                   </template>
                 </Card>
-                <Card title="早上好，不能不好">
-                  <template #footer>
-                    <card-keyword-button>🤠</card-keyword-button>
-                    <card-keyword-button>😋</card-keyword-button>
-                  </template>
-                </Card>
-                <Card title="我只有title"/>
-                <Card>我只有内容</Card>
+
                 <Card title="发送响应式信息" disable-title-head>
                   <div style="max-width: 450px">
-                    <el-input v-model="input" placeholder="请输入要发送的内容" clearable>
+                    <el-input @keydown.enter="addContent" v-model="input" placeholder="请输入要发送的内容" clearable>
                       <template #append>
-                        <el-button>发送</el-button>
+                        <el-button @click="addContent">发送</el-button>
                       </template>
                     </el-input>
                   </div>
                 </Card>
+
+                <Card :title="c" v-for="c in arrays"/>
+
+
               </CardContainer>
             </div>
 
@@ -65,8 +62,6 @@
 
 .el-header {
   border-bottom: solid 1px var(--ep-menu-border-color);
-  /*height: 61px;*/
-  /*padding: 0 0;*/
 }
 
 .el-main {
@@ -113,14 +108,6 @@
 }
 
 
-.image-autofix {
-  height: auto;
-  width: auto;
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 5px;
-}
-
 @media screen and (max-width: 730px) {
   .el-main-left-container {
     display: none;
@@ -131,15 +118,17 @@
   }
 }
 
-@media only screen and (max-width: var(--vp-max-screen-width)) {
-  .e2 {
-    flex: 0;
-  }
-}
 
 </style>
 <script setup>
 import {ref} from "vue";
 
-const input = ref()
+const input = ref(undefined)
+const arrays = ref([])
+
+function addContent(event) {
+  arrays.value.push(input.value)
+  input.value = undefined
+}
+
 </script>

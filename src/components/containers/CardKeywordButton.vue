@@ -11,7 +11,6 @@
 <style scoped>
 .keyword-container {
   border: none;
-  color: #fff;
   background-color: #e1ebfb;
   padding: 8px 10px;
   border-radius: 6px;
