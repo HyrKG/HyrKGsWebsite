@@ -32,13 +32,7 @@
                 </card>
 
                 <card title="发送响应式信息" disable-title-head>
-                  <div style="max-width: 450px">
-                    <el-input @keydown.enter="addContent" v-model="input" placeholder="请输入要发送的内容" clearable>
-                      <template #append>
-                        <el-button @click="addContent">发送</el-button>
-                      </template>
-                    </el-input>
-                  </div>
+                  <TestCardPublish @confirm-input="addContent"/>
                 </card>
 
                 <Card :title="c" v-for="c in arrays"/>
@@ -119,16 +113,14 @@
 
 </style>
 <script setup>
+
 import {ref} from "vue";
 
-const input = ref(undefined)
 const arrays = ref([])
 
-function addContent(event) {
-  if (input.value.toString().trim()) {
-    arrays.value.push(input.value)
+function addContent(text) {
+  if (text) {
+    arrays.value.push(text)
   }
-  input.value = undefined
 }
-
 </script>
