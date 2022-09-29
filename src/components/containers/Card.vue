@@ -37,7 +37,6 @@ const hasFooter = computed(() => useSlots().footer)
 </script>
 
 <style scoped lang="scss">
-
 .card-style {
   padding: 20px 16px;
   background-color: var(--ep-bg-color);
@@ -47,11 +46,12 @@ const hasFooter = computed(() => useSlots().footer)
   transition: .2s;
   width: auto;
   box-shadow: 0px 0px 10px rgb(228, 228, 228);
+  &:hover
+  {
+    transform: scale(1.02);
+  }
 }
 
-.card-style:hover {
-  transform: scale(1.02);
-}
 
 .card-title {
   font-weight: 600;

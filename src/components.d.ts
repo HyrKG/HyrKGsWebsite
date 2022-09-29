@@ -9,7 +9,6 @@ declare module '@vue/runtime-core' {
     BaseSideInfobox: typeof import('./components/layouts/BaseSideInfobox.vue')['default']
     Card: typeof import('./components/containers/Card.vue')['default']
     CardContainer: typeof import('./components/containers/CardContainer.vue')['default']
-    CardKeywordButton: typeof import('./components/containers/CardKeywordButton.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
     ElContainer: typeof import('element-plus/es')['ElContainer']
@@ -18,7 +17,8 @@ declare module '@vue/runtime-core' {
     ElMain: typeof import('element-plus/es')['ElMain']
     ElMenu: typeof import('element-plus/es')['ElMenu']
     ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
-    HelloWorld: typeof import('./components/HelloWorld.vue')['default']
+    EmojiBox: typeof import('./components/containers/EmojiBox.vue')['default']
+    FlexContainer: typeof import('./components/containers/FlexContainer.vue')['default']
   }
 }
 

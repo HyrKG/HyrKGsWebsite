@@ -22,16 +22,16 @@
 
             <div class="el-main-right-container">
               <!--                <HelloWorld/>-->
-              <CardContainer>
-                <Card title="色彩街头 / Alex Webb">
+              <flex-container>
+                <card title="色彩街头 / Alex Webb">
                   <img class="autofix smooth-border" src="/src/assets/alexwebb_img1.png"/>
                   <template #footer>
-                    <card-keyword-button>🤠</card-keyword-button>
-                    <card-keyword-button>😋</card-keyword-button>
+                    <emoji-box>🤠</emoji-box>
+                    <emoji-box>😋</emoji-box>
                   </template>
-                </Card>
+                </card>
 
-                <Card title="发送响应式信息" disable-title-head>
+                <card title="发送响应式信息" disable-title-head>
                   <div style="max-width: 450px">
                     <el-input @keydown.enter="addContent" v-model="input" placeholder="请输入要发送的内容" clearable>
                       <template #append>
@@ -39,12 +39,10 @@
                       </template>
                     </el-input>
                   </div>
-                </Card>
+                </card>
 
                 <Card :title="c" v-for="c in arrays"/>
-
-
-              </CardContainer>
+              </flex-container>
             </div>
 
           </div>
@@ -127,7 +125,9 @@ const input = ref(undefined)
 const arrays = ref([])
 
 function addContent(event) {
-  arrays.value.push(input.value)
+  if (input.value.toString().trim()) {
+    arrays.value.push(input.value)
+  }
   input.value = undefined
 }
 
