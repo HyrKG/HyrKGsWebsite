@@ -1,6 +1,7 @@
 <template>
   <div class="card-style">
-    <div class="card-title">
+    <div v-if="title" class="card-title">
+      <spawn v-if="!disableTitleHead">#</spawn>
       {{ title }}
     </div>
 
@@ -9,17 +10,51 @@
     </div>
 
     <div>
-      <slot name="footer"></slot>
+      <slot name="footer"/>
+    </div>
+
+    <div v-if="hasTitle">
+      has title
+    </div>
+    <div v-if="hasContent">
+      has content
+    </div>
+
+    <div v-if="hasFooter">
+      has footer
     </div>
 
   </div>
 </template>
 
 <script setup>
-defineProps(["title"])
+
+import {computed, useSlots} from "vue";
+
+const props = defineProps({
+  title: String,
+  disableTitleHead: {
+    type: Boolean,
+    default: false
+  }
+
+})
+
+const hasTitle = computed(() => props.title)
+const hasContent = computed(() => {
+  return useSlots().default
+})
+const hasFooter = computed(() => {
+  return useSlots().footer
+})
+
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+.keep-around {
+  margin-top: 15px;
+}
+
 .card-style {
   padding: 20px 16px;
   background-color: var(--ep-bg-color);
@@ -37,12 +72,15 @@ defineProps(["title"])
 
 .card-title {
   font-weight: 600;
-  margin-top: 10px;
   font-size: 16px;
   color: var(--ep-text-color-primary);
+  margin-bottom: 15px;
+  transition: 0.2s;
+
 }
-.card-content
-{
+
+
+.card-content {
 
 }
 </style>

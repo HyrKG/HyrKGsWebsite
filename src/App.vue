@@ -25,7 +25,6 @@
               <CardContainer>
                 <Card title="色彩街头 / Alex Webb">
                   <img class="image-autofix" src="/src/assets/alexwebb_img1.png"/>
-
                   <template #footer>
                     <card-keyword-button>🤠</card-keyword-button>
                     <card-keyword-button>😋</card-keyword-button>
@@ -37,8 +36,18 @@
                     <card-keyword-button>😋</card-keyword-button>
                   </template>
                 </Card>
+                <Card title="发送响应式信息" disable-title-head>
+                    <div style="max-width: 450px">
+                      <el-input v-model="input" placeholder="请输入要发送的内容" clearable>
+                        <template #append>
+                          <el-button>发送</el-button>
+                        </template>
+                      </el-input>
+                    </div>
+                </Card>
               </CardContainer>
             </div>
+
           </div>
         </el-main>
       </el-container>
@@ -107,7 +116,6 @@
   width: auto;
   max-width: 100%;
   max-height: 100%;
-  margin-top: 15px;
   border-radius: 5px;
 }
 
@@ -128,3 +136,8 @@
 }
 
 </style>
+<script setup>
+import {ref} from "vue";
+
+const input = ref()
+</script>

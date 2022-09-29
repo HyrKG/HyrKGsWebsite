@@ -17,7 +17,6 @@
   border-radius: 6px;
   font-size: 13px;
   font-weight: 600;
-  margin-top: 14px;
 }
 
 .keyword-container + .keyword-container {

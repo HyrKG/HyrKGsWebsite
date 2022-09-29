@@ -16,5 +16,6 @@ defineProps(['title'])
   grid-row-gap: 10px;
   -webkit-animation: slideY .6s both;
   animation: slideY .6s both;
+  margin-bottom: 30px;
 }
 </style>
