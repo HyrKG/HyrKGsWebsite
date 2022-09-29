@@ -26,11 +26,11 @@ const input = ref(undefined)
 
 function inputCallback() {
 
-  if (input.value) {
+  if (input.value.toString().trim()) {
     emit("confirm-input", input.value)
     alert.value.type = "success"
     alert.value.title = "发送成功 " + input.value + " ！"
-  }else {
+  } else {
     alert.value.type = "error"
     alert.value.title = "发送失败，内容不能为空！"
   }

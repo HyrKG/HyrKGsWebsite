@@ -33,6 +33,11 @@
 
                 <card title="发送响应式信息" disable-title-head>
                   <TestCardPublish @confirm-input="addContent"/>
+                  <template #footer>
+                    <emoji-box>💬</emoji-box>
+                    <emoji-box>😇</emoji-box>
+                    <emoji-box>浅试一下吧</emoji-box>
+                  </template>
                 </card>
 
                 <Card :title="c" v-for="c in arrays"/>
