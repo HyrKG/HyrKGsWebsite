@@ -36,14 +36,16 @@
                     <card-keyword-button>😋</card-keyword-button>
                   </template>
                 </Card>
+                <Card title="我只有title"/>
+                <Card>我只有内容</Card>
                 <Card title="发送响应式信息" disable-title-head>
-                    <div style="max-width: 450px">
-                      <el-input v-model="input" placeholder="请输入要发送的内容" clearable>
-                        <template #append>
-                          <el-button>发送</el-button>
-                        </template>
-                      </el-input>
-                    </div>
+                  <div style="max-width: 450px">
+                    <el-input v-model="input" placeholder="请输入要发送的内容" clearable>
+                      <template #append>
+                        <el-button>发送</el-button>
+                      </template>
+                    </el-input>
+                  </div>
                 </Card>
               </CardContainer>
             </div>

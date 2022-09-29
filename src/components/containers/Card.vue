@@ -5,25 +5,15 @@
       {{ title }}
     </div>
 
-    <div>
+    <div v-if="hasContent">
+      <div v-if="hasTitle" style="margin-top: 15px"/>
       <slot/>
     </div>
 
-    <div>
+    <div v-if="hasFooter">
+      <div v-if="hasTitle || hasContent" style="margin-top: 15px"/>
       <slot name="footer"/>
     </div>
-
-    <div v-if="hasTitle">
-      has title
-    </div>
-    <div v-if="hasContent">
-      has content
-    </div>
-
-    <div v-if="hasFooter">
-      has footer
-    </div>
-
   </div>
 </template>
 
@@ -51,9 +41,6 @@ const hasFooter = computed(() => {
 </script>
 
 <style scoped lang="scss">
-.keep-around {
-  margin-top: 15px;
-}
 
 .card-style {
   padding: 20px 16px;
@@ -74,9 +61,7 @@ const hasFooter = computed(() => {
   font-weight: 600;
   font-size: 16px;
   color: var(--ep-text-color-primary);
-  margin-bottom: 15px;
   transition: 0.2s;
-
 }
 
 
