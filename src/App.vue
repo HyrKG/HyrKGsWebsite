@@ -46,7 +46,7 @@
             </div>
 
           </div>
-          <div style="text-align: center;color: var(--ep-menu-border-color);">
+          <div style="text-align: center;color: var(--ep-menu-border-color);margin-bottom: 15px">
             <a style="color: var(--ep-menu-border-color)" href="https://beian.miit.gov.cn/">蜀ICP备2022009935号</a>
             ©2022 HyrKG
           </div>
