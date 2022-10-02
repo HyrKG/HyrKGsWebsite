@@ -1,4 +1,4 @@
-我的第一个网站实战+学习项目。基于Vue+Element-UI+Vite。
+我的第一个网站实战+学习项目。前端零基础边实践边学习，基于Vue+Element-UI+Vite。
 
 > Preview: <http://hyrkg.cn>, Based on Element Plus with Vite
 
