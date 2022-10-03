@@ -34,7 +34,7 @@ import {isDark, toggleDark} from '~/composables';</script>
 .logo {
   /*position: relative;*/
   height: calc(var(--ep-menu-item-height) * 0.6);
-  padding: 0 var(--ep-menu-base-level-padding);
+  /*padding: 0 var(--ep-menu-base-level-padding);*/
   margin-top: 15px;
 }
 </style>

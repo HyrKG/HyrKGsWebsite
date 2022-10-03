@@ -53,7 +53,7 @@ function addContent(text) {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 .alert {
   background-color: #e8f2ff;
@@ -67,6 +67,15 @@ function addContent(text) {
   width: 300px;
 }
 
+/*右侧flex布局，使得所有box等长度以保证美观性即可*/
+.el-main-right-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  /*flex: 3;*/
+  padding-left: 40px;
+  /*border: 1px solid red;*/
+}
 
 @media screen and (max-width: 730px) {
   .el-main-left-container {
@@ -78,13 +87,5 @@ function addContent(text) {
   }
 }
 
-/*右侧flex布局，使得所有box等长度以保证美观性即可*/
-.el-main-right-container {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  /*flex: 3;*/
-  padding-left: 40px;
-  /*border: 1px solid red;*/
-}
+
 </style>
