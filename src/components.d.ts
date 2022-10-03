@@ -5,11 +5,12 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    AboutMePage: typeof import('./components/pages/AboutMePage.vue')['default']
+    AboutMePage: typeof import('./components/pages/about/AboutMePage.vue')['default']
     BaseHeader: typeof import('./components/layouts/BaseHeader.vue')['default']
     BaseSideInfobox: typeof import('./components/layouts/BaseSideInfobox.vue')['default']
     Card: typeof import('./components/containers/Card.vue')['default']
-    DocumentPage: typeof import('./components/pages/DocumentPage.vue')['default']
+    CommonPage: typeof import('./components/pages/common/CommonPage.vue')['default']
+    DocumentPage: typeof import('./components/pages/common/DocumentPage.vue')['default']
     ElAlert: typeof import('element-plus/es')['ElAlert']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
@@ -21,7 +22,7 @@ declare module '@vue/runtime-core' {
     ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
     EmojiBox: typeof import('./components/containers/EmojiBox.vue')['default']
     FlexContainer: typeof import('./components/containers/FlexContainer.vue')['default']
-    HomePage: typeof import('./components/pages/HomePage.vue')['default']
+    HomePage: typeof import('./components/pages/common/HomePage.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TestCardPublish: typeof import('./components/test/TestCardPublish.vue')['default']
