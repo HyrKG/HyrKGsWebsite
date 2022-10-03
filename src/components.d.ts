@@ -5,9 +5,11 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AboutMePage: typeof import('./components/pages/AboutMePage.vue')['default']
     BaseHeader: typeof import('./components/layouts/BaseHeader.vue')['default']
     BaseSideInfobox: typeof import('./components/layouts/BaseSideInfobox.vue')['default']
     Card: typeof import('./components/containers/Card.vue')['default']
+    DocumentPage: typeof import('./components/pages/DocumentPage.vue')['default']
     ElAlert: typeof import('element-plus/es')['ElAlert']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
