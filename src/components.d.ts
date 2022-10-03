@@ -19,6 +19,9 @@ declare module '@vue/runtime-core' {
     ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
     EmojiBox: typeof import('./components/containers/EmojiBox.vue')['default']
     FlexContainer: typeof import('./components/containers/FlexContainer.vue')['default']
+    HomePage: typeof import('./components/pages/HomePage.vue')['default']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
     TestCardPublish: typeof import('./components/test/TestCardPublish.vue')['default']
   }
 }
