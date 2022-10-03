@@ -1,5 +1,4 @@
 <template>
-  <el-config-provider namespace="ep">
     <el-container class="operation-wrapper">
       <!--      头部-->
       <el-header class="el-header">
@@ -18,7 +17,6 @@
       </el-container>
 
     </el-container>
-  </el-config-provider>
 </template>
 
 <script setup>
