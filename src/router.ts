@@ -6,9 +6,10 @@ import AboutMePage from './components/pages/AboutMePage.vue'
 
 
 const routes = [
-    {path: '/', component: HomePage},
+    {path: '/', redirect: {path: '/home'}},
+    {path: '/home', component: HomePage},
     {path: '/doc', component: DocumentPage},
-    {path: '/me', component: AboutMePage}
+    {path: '/about', component: AboutMePage}
 ]
 
 export const router = createRouter({
