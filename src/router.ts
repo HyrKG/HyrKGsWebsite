@@ -1,18 +1,21 @@
 import {createRouter, createWebHistory} from "vue-router";
 
-import CommonPage from "./components/pages/common/CommonPage.vue"
+import CommonPage from "./components/pages/common/CommonView.vue"
 import HomePage from "./components/pages/common/HomePage.vue"
 import DocumentPage from './components/pages/common/DocumentPage.vue'
 import AboutMePage from './components/pages/about/AboutMePage.vue'
 
 
 const routes = [
+    // 这是一个common页面，默认开启header，并且页面可有header跳转
+    {path: '/', redirect: "/home"},
     {
         path: '/common', alias: "/", component: CommonPage, children: [
-            {path: 'home', alias: "/", component: HomePage},
+            {path: 'home', component: HomePage},
             {path: 'doc', component: DocumentPage},
         ]
     },
+    // 这是一个singleton页面，对应组件即对应页面。
     {path: '/about', component: AboutMePage}
 ]
 

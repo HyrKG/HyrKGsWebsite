@@ -3,7 +3,7 @@
     <el-container class="operation-wrapper">
       <!--      头部-->
       <el-header class="el-header">
-        <BaseHeader/>
+        <BaseHeader />
       </el-header>
 
       <!--      内容容器-->
@@ -22,7 +22,6 @@
 </template>
 
 <script setup>
-
 </script>
 
 <style scoped>

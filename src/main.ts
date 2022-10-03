@@ -14,7 +14,6 @@ import "element-plus/theme-chalk/src/message.scss"
 
 import {router} from "./router"
 
-
 const app = createApp(App);
 // app.use(ElementPlus);
 app.use(router)

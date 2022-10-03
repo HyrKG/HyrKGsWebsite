@@ -9,7 +9,7 @@ declare module '@vue/runtime-core' {
     BaseHeader: typeof import('./components/layouts/BaseHeader.vue')['default']
     BaseSideInfobox: typeof import('./components/layouts/BaseSideInfobox.vue')['default']
     Card: typeof import('./components/containers/Card.vue')['default']
-    CommonPage: typeof import('./components/pages/common/CommonPage.vue')['default']
+    CommonView: typeof import('./components/pages/common/CommonView.vue')['default']
     DocumentPage: typeof import('./components/pages/common/DocumentPage.vue')['default']
     ElAlert: typeof import('element-plus/es')['ElAlert']
     ElButton: typeof import('element-plus/es')['ElButton']

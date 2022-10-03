@@ -1,13 +1,8 @@
 <script lang="ts" setup>
-import {isDark, toggleDark} from '~/composables';
-import {ref} from 'vue'
-
-const activeIndex = ref('/')
-
-</script>
+import {isDark, toggleDark} from '~/composables';</script>
 
 <template>
-  <el-menu :default-active="activeIndex" menu-trigger="click" class="el-menu-demo" mode="horizontal" router="true">
+  <el-menu :default-active="$route.path" menu-trigger="click" class="el-menu-demo" mode="horizontal" router="true">
 
     <div v-if="isDark">
       <img class="logo" alt="logo" src="../../assets/logo-dark.png"/>
@@ -17,7 +12,7 @@ const activeIndex = ref('/')
     </div>
 
     <div class="flex-grow"/>
-    <el-menu-item index="/">首页</el-menu-item>
+    <el-menu-item index="/home">首页</el-menu-item>
     <el-menu-item index="/doc">文档</el-menu-item>
     <el-menu-item index="/about">关于我</el-menu-item>
     <el-menu-item index="" @click="toggleDark()">
