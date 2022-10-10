@@ -27,13 +27,19 @@ code {
   background-color: var(--ep-color-primary-light-9);
   color: var(--ep-color-primary);
 }
-
-.autofix {
+@mixin autofix-mixin
+{
   height: auto;
   width: auto;
   max-width: 100%;
   max-height: 100%;
+  border: 1px solid red;
 }
+.autofix {
+  @include autofix-mixin
+}
+
+
 
 .smooth-border {
   border-radius: 5px;

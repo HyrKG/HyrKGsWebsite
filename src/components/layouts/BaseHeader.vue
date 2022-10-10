@@ -14,6 +14,7 @@ import {isDark, toggleDark} from '~/composables';</script>
     <div class="flex-grow"/>
     <el-menu-item index="/home">首页</el-menu-item>
     <el-menu-item index="/doc">文档</el-menu-item>
+    <el-menu-item index="/playground">游乐场</el-menu-item>
     <el-menu-item index="/about">关于我</el-menu-item>
     <el-menu-item index="" @click="toggleDark()">
       <button class="border-none w-full bg-transparent cursor-pointer" style="height: var(--ep-menu-item-height);">

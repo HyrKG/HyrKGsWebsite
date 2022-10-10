@@ -46,8 +46,8 @@ const hasFooter = computed(() => useSlots().footer)
   transition: .2s;
   width: auto;
   box-shadow: 0px 0px 10px rgb(228, 228, 228);
-  &:hover
-  {
+
+  &:hover {
     transform: scale(1.02);
   }
 }
@@ -58,10 +58,5 @@ const hasFooter = computed(() => useSlots().footer)
   font-size: 16px;
   color: var(--ep-text-color-primary);
   transition: 0.2s;
-}
-
-
-.card-content {
-
 }
 </style>

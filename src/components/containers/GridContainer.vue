@@ -8,20 +8,14 @@
 defineProps(['title'])
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .card-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-
-  flex-grow: 1;
-
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: 25px;
+  grid-row-gap: 12px;
   -webkit-animation: slideY .6s both;
   animation: slideY .6s both;
   margin-bottom: 20px;
-
-  border: 1px solid red;
 }
-
 </style>

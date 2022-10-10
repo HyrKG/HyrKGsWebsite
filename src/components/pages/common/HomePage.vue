@@ -10,7 +10,7 @@
 
   <div class="el-main-right-container">
     <!--                <HelloWorld/>-->
-    <flex-container>
+    <grid-container>
       <card title="色彩街头 / Alex Webb">
         <img class="autofix smooth-border" src="/src/assets/alexwebb_img1.png"/>
         <template #footer>
@@ -29,7 +29,7 @@
       </card>
 
       <Card :title="c" v-for="c in arrays"/>
-    </flex-container>
+    </grid-container>
 
 
     <div style="text-align: center;color: var(--ep-menu-border-color);margin-bottom: 15px">
