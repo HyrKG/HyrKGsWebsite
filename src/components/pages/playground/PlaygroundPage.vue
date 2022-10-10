@@ -1,7 +1,7 @@
 <template>
   <flex-container>
     <card title="响应卡片测试">
-      <ToyCreateAnotherCard/>
+      <ToyCreateAnotherCard @addCard="invokedAddCard"/>
     </card>
 
 
@@ -24,6 +24,11 @@ $card-margin: 10px;
 <script setup>
 import {ref} from "vue";
 
-const empty_card_list = ref(["dawdw"])
+const empty_card_list = ref([])
+
+
+function invokedAddCard() {
+  empty_card_list.value.push("创建于 " + Date.now())
+}
 
 </script>

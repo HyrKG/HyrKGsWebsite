@@ -3,7 +3,7 @@
   <div class="el-main-left-container e2">
     <!--                <BaseSideInfobox/>-->
     <div class="alert">
-      （不重要）信息栏/侧栏
+      左右拖动页面边界测试响应式布局
     </div>
 
   </div>
