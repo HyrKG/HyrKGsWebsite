@@ -1,17 +1,29 @@
 <template>
   <flex-container>
-    <Card title="动画测试" class="card-fix">
-      abcdwa
-    </Card>
+    <card title="响应卡片测试">
+      <ToyCreateAnotherCard/>
+    </card>
+
+
+    <card v-for="(item,index) in empty_card_list" :title="'响应式卡片'+String(index+1)">
+      {{ item }}
+    </card>
+
+
   </flex-container>
 </template>
 
 
 <style scoped lang="scss">
-.card-fix {
-  margin: 5px 5px 5px 5px;
+$card-margin: 10px;
+
+.card-style {
+  margin: $card-margin $card-margin $card-margin $card-margin;
 }
 </style>
 <script setup>
+import {ref} from "vue";
+
+const empty_card_list = ref(["dawdw"])
 
 </script>
