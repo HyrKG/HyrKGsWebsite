@@ -26,7 +26,7 @@ const props = defineProps({
   disableTitleHead: {
     type: Boolean,
     default: false
-  }
+  },
 
 })
 

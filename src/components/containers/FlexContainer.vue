@@ -20,8 +20,6 @@ defineProps(['title'])
   -webkit-animation: slideY .6s both;
   animation: slideY .6s both;
   margin-bottom: 20px;
-
-  border: 1px solid red;
 }
 
 </style>
