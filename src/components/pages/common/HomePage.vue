@@ -11,14 +11,6 @@
   <div class="el-main-right-container">
     <!--                <HelloWorld/>-->
     <grid-container>
-      <card title="色彩街头 / Alex Webb">
-        <img class="autofix smooth-border" src="/src/assets/alexwebb_img1.png"/>
-        <template #footer>
-          <emoji-box>🤠</emoji-box>
-          <emoji-box>😋</emoji-box>
-        </template>
-      </card>
-
       <card title="前往游乐场，看看我如何把知识变为现实" disable-title-head>
         <el-button @click="this.$router.push('/playground')">点击前往游乐场</el-button>
         <template #footer>
@@ -27,6 +19,15 @@
           <emoji-box>去看看吧！</emoji-box>
         </template>
       </card>
+      <card title="色彩街头 / Alex Webb">
+        <img class="autofix smooth-border" src="/src/assets/alexwebb_img1.png"/>
+        <template #footer>
+          <emoji-box>🤠</emoji-box>
+          <emoji-box>😋</emoji-box>
+        </template>
+      </card>
+
+
 
     </grid-container>
 

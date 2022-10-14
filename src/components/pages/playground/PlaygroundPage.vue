@@ -39,6 +39,14 @@ $card-max-width: 300px;
   transform: scale(0) rotateX(160deg);
 }
 
+@media screen and (max-width: 730px) {
+  .card-style
+  {
+    flex-grow: 1;
+    max-width: none;
+  }
+}
+
 </style>
 <script setup>
 import {ref} from "vue";
