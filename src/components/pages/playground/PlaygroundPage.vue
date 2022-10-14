@@ -1,6 +1,6 @@
 <template>
   <flex-container>
-    <TransitionGroup name="list" appear>
+    <TransitionGroup name="list">
       <template v-for="card in comps">
         <template v-if="card.ignoreCard">
           <component :is="card.comp" v-bind="card.props"/>
@@ -13,8 +13,6 @@
         </template>
       </template>
     </TransitionGroup>
-
-
   </flex-container>
 </template>
 

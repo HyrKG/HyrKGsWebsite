@@ -22,7 +22,6 @@ function onMousemove(e) {
 <style scoped>
 
 .movearea {
-  transition: all 0.5s ease;
   color: white;
   font-size: 6px;
   width: 100%;

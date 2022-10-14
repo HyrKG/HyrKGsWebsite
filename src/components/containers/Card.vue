@@ -1,8 +1,7 @@
 <template>
-
   <div class="card-style">
-
     <div v-if="title" class="card-title">
+
       <spawn v-if="!disableTitleHead">#</spawn>
       {{ title }}
     </div>
@@ -39,6 +38,10 @@ const hasFooter = computed(() => useSlots().footer)
 </script>
 
 <style scoped lang="scss">
+.badge:hover {
+  transform: scale(2);
+}
+
 .card-style {
   padding: 20px 16px;
   background-color: var(--ep-bg-color);
