@@ -19,16 +19,15 @@
         </template>
       </card>
 
-      <card title="发送响应式信息" disable-title-head>
-        <TestCardPublish @confirm-input="addContent"/>
+      <card title="前往游乐场，看看我如何把知识变为现实" disable-title-head>
+        <el-button @click="this.$router.push('/playground')">点击前往游乐场</el-button>
         <template #footer>
           <emoji-box>💬</emoji-box>
           <emoji-box>😇</emoji-box>
-          <emoji-box>浅试一下吧</emoji-box>
+          <emoji-box>去看看吧！</emoji-box>
         </template>
       </card>
 
-      <Card :title="c" v-for="c in arrays"/>
     </grid-container>
 
 
@@ -42,15 +41,6 @@
 
 <script setup>
 
-import {ref} from "vue";
-
-const arrays = ref([])
-
-function addContent(text) {
-  if (text) {
-    arrays.value.push(text)
-  }
-}
 </script>
 
 <style scoped lang="scss">
