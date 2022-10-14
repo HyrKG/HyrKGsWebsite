@@ -22,10 +22,10 @@ function onMousemove(e) {
 <style scoped>
 
 .movearea {
-  transition: 0.3s background-color ease;
-  flex-grow: 1;
+  transition: all 0.5s ease;
   color: white;
   font-size: 6px;
+  width: 100%;
 }
 
 </style>

@@ -1,18 +1,19 @@
 <template>
   <flex-container>
+    <TransitionGroup name="list" appear>
+      <template v-for="card in comps">
+        <template v-if="card.ignoreCard">
+          <component :is="card.comp" v-bind="card.props"/>
+        </template>
 
-
-    <template v-for="card in comps">
-      <template v-if="card.ignoreCard">
-        <component :is="card.comp" v-bind="card.props"/>
+        <template v-else>
+          <card v-bind="card.props">
+            <component :is="card.comp" @addCard="addCard"/>
+          </card>
+        </template>
       </template>
+    </TransitionGroup>
 
-      <template v-else>
-        <card v-bind="card.props">
-          <component :is="card.comp" @addCard="addCard"/>
-        </card>
-      </template>
-    </template>
 
   </flex-container>
 </template>
@@ -27,6 +28,16 @@ $card-max-width: 300px;
   max-width: $card-max-width;
 }
 
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+
+  transform: scale(0) rotateX(160deg);
+}
 
 </style>
 <script setup>
@@ -52,7 +63,7 @@ const card_type = {
 
 }
 
-const comps = ref([card_type[0], card_type[1]])
+const comps = ref([card_type[1], card_type[0]])
 
 function addCard(type) {
   console.log('type is ' + type)
