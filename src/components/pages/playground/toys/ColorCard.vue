@@ -2,15 +2,15 @@
   <card @mousemove="onMousemove"
         :style="{ backgroundColor: `hsl(${x}, 80%, 50%)` }"
         class="movearea card-title">
-    <p>在此卡片上移动鼠标进行变色</p>
-    <p>posx: {{ x }}</p>
+    <p>在卡片上悬浮变色</p>
+    <p>{{ x }}</p>
   </card>
 </template>
 
 <script setup>
 import {ref} from "vue";
 
-const x = ref(910)
+const x = ref(parseInt(Math.random() * 1500))
 
 
 function onMousemove(e) {
@@ -23,8 +23,7 @@ function onMousemove(e) {
 
 .movearea {
   color: white;
-  font-size: 6px;
-  width: 100%;
+  font-size: 15px;
 }
 
 </style>

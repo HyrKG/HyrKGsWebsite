@@ -1,7 +1,6 @@
 <template>
-  <div class="card-style">
+  <div class="card-style" @contextmenu.prevent="deleteCard">
     <div v-if="title" class="card-title">
-
       <spawn v-if="!disableTitleHead">#</spawn>
       {{ title }}
     </div>
@@ -16,6 +15,7 @@
       <slot name="footer"/>
     </div>
   </div>
+
 </template>
 
 <script setup>
@@ -28,18 +28,34 @@ const props = defineProps({
     type: Boolean,
     default: false
   },
-
+  enableDeletable:
+      {
+        type: Boolean,
+        default: false
+      }
+  ,
+  cardId: {
+    type: Number,
+    default: -1
+  }
 })
+
+const emit = defineEmits(["delete-card"])
 
 const hasTitle = computed(() => props.title)
 const hasContent = computed(() => useSlots().default)
 const hasFooter = computed(() => useSlots().footer)
 
+function deleteCard() {
+  emit("delete-card", props.cardId)
+}
+
 </script>
 
 <style scoped lang="scss">
-.badge:hover {
-  transform: scale(2);
+.badge {
+  transition: all 0.2s ease;
+  width: 100%;
 }
 
 .card-style {
@@ -47,7 +63,6 @@ const hasFooter = computed(() => useSlots().footer)
   background-color: var(--ep-bg-color);
   border-radius: 8px;
   cursor: pointer;
-  -webkit-transition: .2s;
   transition: .2s;
   width: auto;
   box-shadow: 0px 0px 10px rgb(228, 228, 228);

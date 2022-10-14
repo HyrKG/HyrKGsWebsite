@@ -12,7 +12,6 @@ declare module '@vue/runtime-core' {
     ColorCard: typeof import('./components/pages/playground/toys/ColorCard.vue')['default']
     CommonView: typeof import('./components/pages/common/CommonView.vue')['default']
     DocumentPage: typeof import('./components/pages/common/DocumentPage.vue')['default']
-    ElBadge: typeof import('element-plus/es')['ElBadge']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
     ElContainer: typeof import('element-plus/es')['ElContainer']
@@ -29,7 +28,6 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     ToyCreateAnotherCard: typeof import('./components/pages/playground/toys/ToyCreateAnotherCard.vue')['default']
-    TransitionGroupCardFlipUp: typeof import('./components/transitions/TransitionGroupCardFlipUp.vue')['default']
   }
 }
 
