@@ -32,23 +32,34 @@
 ### VUE
 > 我是直接学的组合式API，熟话说学新不学旧！组件库用的阿里的 [element-plus](https://element-plus.gitee.io/zh-CN/component/menu.html)
 > - 💡【响应式基础】reactive(这个我不常用，我直接ref万物)、ref(被ref的对象就变成响应式了)、v-bind(常用)、{{}}
+> - 
 > - 💡【语法基础】v-if(常用)、v-for(常用)、v-on(常用)、v-model
+> - 
 > - 💡【计算属性】computed
+> - 
 > - 💡【组件化】props(常用)、插槽(name、temple。常用)、事件回传[$emit]、透传attributes
+> - 
 > - 💡【路由管理】vue-router的基础配置(path、redirect、alias、children、component)
+> - 
 > - 💡【动画】Transition、TransitionGroup
 ### JavaScript / TypeScript
 > - 💡【声明关键字】var、let、const(常用)
+> - 
 > - 💡【对象基础】list[]、dict{}、万物皆对象(到这就了解为什么ref出来的要value才能用了)
+> - 
 > - 💡【方法、传参、复用】 import、function(结合万物皆对象可以了解computed原理了)
 
 ### CSS / SCSS:
 > - 💡【样式基础】
 > - - 字体样式： color、font-size、font-family(字体，我直接copy别人的)
-> - - 容器样式： background-color、border-radius(圆角)、box-shadow(边框阴影)、border(边框绘制，我通常布局都会打开)
+> - - 容器样式： background-color、border-radius(圆角)、box-shadow(边框阴影)、border(边框绘制，我通常设计布局时都会打开)
+> - 
 > - 💡【布局基础】padding(容器内距离调整)、margin(容器外距离调整)、width/height(100%可以自动填满，不然很丑)、max-width/max-height
+> - 
 > - 💡【响应式(flex)布局，可以让页面兼容手机】display:flex、flex-direction、flex-wrap、justify-content、flex-grow(常用)
+> - 
 > - 💡【动画基础】transition、transform、伪类(如:hover)
+> - 
 > - 💡【样式优先级】!import(我的坏习惯：遇事不决就!import)
 ### HTML
 > 好像没啥特别知识点，就是各类标签，基本需要就百度。
