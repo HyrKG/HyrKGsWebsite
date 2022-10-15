@@ -43,9 +43,9 @@
 > - 
 > - 💡【动画】Transition、TransitionGroup
 ### JavaScript / TypeScript
-> - 💡【声明关键字】var、let、const(常用)
+> - 💡【变量】var、let、const(常用)
 > - 
-> - 💡【对象基础】list[]、dict{}、万物皆对象(到这就了解为什么ref出来的要value才能用了)
+> - 💡【对象基础】array[]、对象{}(我当map用)、万物皆对象(到这就了解为什么ref出来的要value才能用了)
 > - 
 > - 💡【方法、传参、复用】 import、function(结合万物皆对象可以了解computed原理了)
 

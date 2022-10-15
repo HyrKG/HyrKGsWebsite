@@ -75,7 +75,7 @@ import ColorCard from "../playground/toys/ColorCard.vue"
 import ToyCreateAnotherCard from "../playground/toys/ToyCreateAnotherCard.vue"
 import {v4} from 'uuid'
 
-const hesays = ref("我的意思是，删了他们！")
+const hesays = ref("我的意思是，删了他们！当然，别右键我。")
 
 const card_type = {
   0: {
@@ -121,13 +121,13 @@ function addCard(type) {
 
 function deleteLeftClick(card_id) {
   if (comps.value[card_id]._i_am_magic != undefined) {
-    hesays.value = "ops...这都被你发现了。"
+    hesays.value = "🧙：可恶！"
     comps.value = {}
 
     const lastWords = {
       "props":
           {
-            "title": "他带走了全场，并留下了一句话：",
+            "title": "法师清空了全场",
             "content": hesays,
             "emojis": ["😕", " 😖"]
           }
@@ -148,6 +148,15 @@ function deleteCard(card_id) {
     return;
   }
   delete comps.value[card_id]
-}
 
+  //检查元素列表是否为空
+  let count = 0;
+  for (let c in comps.value) {
+    count += 1;
+  }
+  console.log(count)
+  if (count === 0) {
+    addComponent(card_type[1])
+  }
+}
 </script>
