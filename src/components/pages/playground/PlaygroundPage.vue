@@ -7,11 +7,12 @@
 
 
         <template v-if="card.ignoreCard">
-          <component :is="card.comp" :card-id="uuid" v-bind="card.props" @delete-card="deleteCard"/>
+          <component :is="card.comp" :key="uuid" :card-id="uuid" v-bind="card.props" @delete-card="deleteCard"/>
         </template>
         <template v-else>
 
-          <card v-bind="card.props" :card-id="uuid" @click="deleteLeftClick(uuid)" @delete-card="deleteCard">
+          <card v-bind="card.props" :key="uuid" :card-id="uuid" @click="deleteLeftClick(uuid)"
+                @delete-card="deleteCard">
             <component :is="card.comp" @addCard="addCard"/>
             <div v-if="card.props.content">
               {{ card.props.content }}
@@ -45,15 +46,17 @@ $card-max-width: 300px;
   user-select: none;
 }
 
-.list-enter-active,
-.list-leave-active {
+.list-enter-active {
   transition: all 0.5s ease;
+}
+
+.list-leave-active {
+  transition: all 0.1s ease;
 }
 
 .list-enter-from,
 .list-leave-to {
   opacity: 0;
-
   transform: scale(0) rotateX(160deg);
 }
 

@@ -1,8 +1,11 @@
 <template>
-  关于我，这是一个singleton页面，你可以看到该组件即为完全页面表现。
-
-  <el-input v-model="pageBack"></el-input>
-  <el-button @click="routeBack">点击我路由返回上{{ pageBack }}页</el-button>
+  <flex-container style="margin-top: 20px">
+    <card title="暂未开发">
+      这是一个singleton页面，你可以看到该组件即为完全页面表现。
+      <p><el-input v-model="pageBack"></el-input></p>
+      <el-button @click="routeBack">点击我路由返回上{{ pageBack }}页</el-button>
+    </card>
+  </flex-container>
 </template>
 
 <script setup>
