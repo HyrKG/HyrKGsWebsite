@@ -1,7 +1,7 @@
 # 简介
 我个人的前端零基础学习项目，任务驱动学习！不定期更新，平常有工作和学习要做。
 
-> #### ☞ 预览(preview):  <http://hyrkg.cn>
+> #### ☞ 预览(preview):  <a href=“http://hyrkg.cn” target="_blank">http://hyrkg.cn</a>
 
 ### 欢迎[右上角↗️STAR⭐](https://github.com/HyrKG/HyrKGsWebsite)我的项目，让我们共同学习进步！
 
