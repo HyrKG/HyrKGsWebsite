@@ -44,8 +44,8 @@
 
 ### CSS / SCSS:
 > - 💡【样式基础】
-> - - 字体样式： color、font-size、font-family(字体，我直接copy别人的)
-> - - 容器样式： background-color、border-radius(圆角)、box-shadow(边框阴影)、border(边框绘制，我通常设计布局时都会打开)
+> - 》》字体样式： color、font-size、font-family(字体，我直接copy别人的)
+> - 》》容器样式： background-color、border-radius(圆角)、box-shadow(边框阴影)、border(边框绘制，我通常设计布局时都会打开)
 > - 💡【布局基础】padding(容器内距离调整)、margin(容器外距离调整)、width/height(100%可以自动填满，不然很丑)、max-width/max-height
 > - 💡【响应式(flex)布局，可以让页面兼容手机】display:flex、flex-direction、flex-wrap、justify-content、flex-grow(常用)
 > - 💡【动画基础】transition、transform、伪类(如:hover)
