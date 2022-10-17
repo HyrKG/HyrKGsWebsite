@@ -27,6 +27,7 @@ declare module '@vue/runtime-core' {
     PlaygroundPage: typeof import('./components/pages/playground/PlaygroundPage.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    ShareDeskPage: typeof import('./components/pages/common/ShareDeskPage.vue')['default']
     ToyCreateAnotherCard: typeof import('./components/pages/playground/toys/ToyCreateAnotherCard.vue')['default']
   }
 }

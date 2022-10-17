@@ -1,5 +1,5 @@
 <template>
-  <div class="card-style" @contextmenu.prevent="deleteCard">
+  <div class="card-style" :style="disableShadow?'':'box-shadow: 0px 0px 10px rgb(228, 228, 228);'" @contextmenu.prevent="deleteCard">
     <div v-if="title" class="card-title">
       <spawn v-if="!disableTitleHead">#</spawn>
       {{ title }}
@@ -28,6 +28,11 @@ const props = defineProps({
     type: Boolean,
     default: false
   },
+  disableShadow: {
+    type: Boolean,
+    default: false
+  }
+  ,
   enableDeletable:
       {
         type: Boolean,
@@ -66,7 +71,6 @@ function deleteCard() {
   cursor: pointer;
   transition: .2s;
   width: auto;
-  box-shadow: 0px 0px 10px rgb(228, 228, 228);
 
   &:hover {
     transform: scale(1.02);
@@ -75,7 +79,7 @@ function deleteCard() {
 
 html.dark {
   .card-style {
-    box-shadow: none;
+    box-shadow: none !important;
     border: 1px solid dimgray;
   }
 }
