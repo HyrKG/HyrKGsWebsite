@@ -18,8 +18,8 @@
   font-weight: 600;
 }
 
-html.dark{
-  .emoji-box{
+html.dark {
+  .emoji-box {
     background-color: cornflowerblue;
   }
 }

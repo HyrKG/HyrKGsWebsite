@@ -9,16 +9,26 @@
   </div>
 
   <div class="el-main-right-container">
-    <!--                <HelloWorld/>-->
+
     <grid-container>
-      <card title="前往游乐场，看看我如何把知识变为现实" disable-title-head>
-        <el-button @click="this.$router.push('/playground')">点击前往游乐场</el-button>
+      <card title="📁 边学习边开发 在线文件协同方案" disable-title-head>
+        <el-button @click="this.$router.push('/share-desk')">点击前往 圆桌</el-button>
+        <template #footer>
+          <emoji-box>🤔</emoji-box>
+          <emoji-box>✊</emoji-box>
+          <emoji-box>✊</emoji-box>
+        </template>
+      </card>
+
+      <card title="🔮 魔法、特效，好玩东西的试验场。" disable-title-head>
+        <el-button @click="this.$router.push('/playground')">点击前往 游乐场</el-button>
         <template #footer>
           <emoji-box>💬</emoji-box>
           <emoji-box>😇</emoji-box>
-          <emoji-box>去看看吧！</emoji-box>
+          <emoji-box>🧑‍💻</emoji-box>
         </template>
       </card>
+
       <card title="色彩街头 / Alex Webb">
         <img class="autofix smooth-border" src="/src/assets/alexwebb_img1.png"/>
         <template #footer>
