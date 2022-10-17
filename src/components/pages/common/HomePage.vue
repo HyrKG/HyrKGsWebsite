@@ -50,6 +50,8 @@
   background-color: #e8f2ff;
   padding: 24px 18px;
   border-radius: 8px;
+  font-weight: bold;
+  color: black;
   /*border: 1px solid #1a9537;*/
 }
 

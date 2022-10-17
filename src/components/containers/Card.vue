@@ -58,6 +58,7 @@ function deleteCard() {
   width: 100%;
 }
 
+
 .card-style {
   padding: 20px 16px;
   background-color: var(--ep-bg-color);
@@ -69,6 +70,13 @@ function deleteCard() {
 
   &:hover {
     transform: scale(1.02);
+  }
+}
+
+html.dark {
+  .card-style {
+    box-shadow: none;
+    border: 1px solid dimgray;
   }
 }
 

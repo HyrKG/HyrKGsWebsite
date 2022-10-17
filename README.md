@@ -6,11 +6,11 @@
 ### 欢迎[右上角↗️STAR⭐](https://github.com/HyrKG/HyrKGsWebsite)我的项目，让我们共同学习进步！
 
 # 📃 我的计划 To-do List:
-- [ ] 让我的卡片效果也支持夜间模式（还在研究学习scss）
 - [ ] vuex，感觉还是要先学学
 - [ ] 大计划！👾圆桌(share-table)，通过编号进入同一张圆桌，并实时共享下载文件，不用下网盘了。
 - [x] ~~卡片删除会删到其他卡片，太奇怪了。~~ v-for中元素加上key标识即可
-
+- [x] ~~让我的卡片效果也支持夜间模式（还在研究学习scss）~~
+- 
 # 📗 已完成！ Checked List:
 - [x] (vue-TransitionGroup) 让我的[🔮playground](http://hyrkg.cn/playground)有炫酷动画
 - [x] (vue、js)让组件可以无限增加或自我删除。列表加载组件，而不是直接写到html内！
