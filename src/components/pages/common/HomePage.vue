@@ -16,7 +16,7 @@
         <template #footer>
           <emoji-box>🤔</emoji-box>
           <emoji-box>✊</emoji-box>
-          <emoji-box>✊</emoji-box>
+          <emoji-box>🧑‍💻</emoji-box>
         </template>
       </card>
 
@@ -25,7 +25,7 @@
         <template #footer>
           <emoji-box>💬</emoji-box>
           <emoji-box>😇</emoji-box>
-          <emoji-box>🧑‍💻</emoji-box>
+          <emoji-box>🧙</emoji-box>
         </template>
       </card>
 
