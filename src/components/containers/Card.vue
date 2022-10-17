@@ -1,6 +1,6 @@
 <template>
   <div
-      :class="['card-style',{'hide-shadow':disableShadow},{'font-color':keepFontBlack},{'enable-animation':!disableAnimation}]"
+      :class="['card',{'hide-shadow':disableShadow},{'font-color':keepFontBlack},{'enable-animation':!disableAnimation}]"
       @contextmenu.prevent="deleteCard">
     <div v-if="title" class="card-title">
       <spawn v-if="!disableTitleHead">#</spawn>
@@ -76,7 +76,7 @@ function deleteCard() {
 }
 
 
-.card-style {
+.card {
   padding: 20px 16px;
   background-color: var(--ep-bg-color);
   border-radius: 8px;
@@ -88,7 +88,7 @@ function deleteCard() {
 
 
 html.dark {
-  .card-style {
+  .card {
     box-shadow: none !important;
     border: 1px solid dimgray;
   }

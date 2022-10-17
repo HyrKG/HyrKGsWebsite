@@ -1,25 +1,93 @@
 <template>
-  <flex-container style="border: 1px solid red">
-    <card title="🚧 圆桌正在施工中..." style="background-color: var(--comp-light-blue)" disable-shadow keep-font-black
-    >
-      你能够使用<u>编号</u>创建或组建圆桌，在圆桌中，你能够自由实时共享文件。
-    </card>
+  <flex-container class="main-container">
+    <flex-container class="left-container">
+      <card title="🚧 圆桌正在施工中..." style="background-color: var(--comp-light-blue)" disable-shadow keep-font-black
+      >
+        你能够使用<u>编号</u>创建或组建圆桌，在圆桌中，你能够自由实时共享文件。
+      </card>
+
+      <card title="📁 暂未加入任何圆桌" style="background-color: var(--comp-light-blue)" disable-shadow keep-font-black
+      >
+        <div class="fix-card">
+          <div>
+            <el-input placeholder="# 圆桌编号"/>
+          </div>
+          <div>
+            <el-button @click="open" class="fix-card" type="primary">加入圆桌</el-button>
+          </div>
+          <div>
+            <el-button @click="open" class="fix-card">创建圆桌</el-button>
+          </div>
+        </div>
+      </card>
+    </flex-container>
+
+    <flex-container class="right-container">
+      <card class="card_desk" title="📁 工作中圆桌" keep-font-black disable-shadow disable-title-head>
+        似乎没有发现你加入任何圆桌。你可以在左侧选择加入圆桌。
+      </card>
+    </flex-container>
   </flex-container>
 </template>
 
-<script setup>
-
+<script lang="ts" setup>
+import { ElMessage } from 'element-plus'
+const open = () => {
+  ElMessage({
+    message: '当前仅为演示，具体功能开发中。',
+    type: 'warning',
+  })
+}
 </script>
 
-<style scoped>
 
+<style scoped lang="scss">
+/*覆写flex容器属性*/
+.main-container {
+  justify-content: left;
+
+}
+
+.left-container {
+  flex-direction: column;
+  justify-content: left;
+  max-width: 300px;
+  margin-bottom: 0px;
+}
+
+.right-container {
+  justify-content: left;
+  flex-direction: column;
+  flex-grow: 1;
+
+}
+
+@media screen and (max-width: 730px) {
+  .left-container {
+    max-width: 100%;
+  }
+}
+
+.fix-card {
+  width: 100%;
+
+  div + div {
+    margin-top: 5px;
+  }
+}
+
+.card {
+  margin: 10px;
+  /*flex-grow: 1;*/
+}
+
+.card_desk {
+  background-color: var(--comp-wood-yellow);
+  min-height: 300px;
+}
 
 p {
   line-height: 0.4rem;
-}
-
-flex-container {
-  border: 1px red solid;
 }
 
 </style>

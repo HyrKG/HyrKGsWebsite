@@ -40,7 +40,7 @@
 $card-margin: 10px;
 $card-max-width: 300px;
 
-.card-style {
+.card {
   margin: $card-margin $card-margin $card-margin $card-margin;
   max-width: $card-max-width;
   user-select: none;
@@ -61,7 +61,7 @@ $card-max-width: 300px;
 }
 
 @media screen and (max-width: 730px) {
-  .card-style {
+  .card {
     flex-grow: 1;
     max-width: none;
   }

@@ -1,22 +1,22 @@
 <template>
-    <el-container class="operation-wrapper">
-      <!--      头部-->
-      <el-header class="el-header">
-        <BaseHeader />
-      </el-header>
+  <el-container class="operation-wrapper">
+    <!--      头部-->
+    <el-header class="el-header">
+      <BaseHeader/>
+    </el-header>
 
-      <!--      内容容器-->
-      <el-container>
+    <!--      内容容器-->
+    <el-container>
 
-        <el-main class="el-main">
-          <div class="el-container flex-container">
-            <router-view></router-view>
-          </div>
-        </el-main>
-
-      </el-container>
+      <el-main class="el-main">
+        <div class="el-container flex-container">
+          <router-view></router-view>
+        </div>
+      </el-main>
 
     </el-container>
+
+  </el-container>
 </template>
 
 <script setup>
