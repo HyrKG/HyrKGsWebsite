@@ -1,5 +1,7 @@
 <template>
-  <div class="card-style" :style="disableShadow?'':'box-shadow: 0px 0px 10px rgb(228, 228, 228);'" @contextmenu.prevent="deleteCard">
+  <div
+      :class="['card-style',{'hide-shadow':disableShadow},{'font-color':keepFontBlack},{'enable-animation':!disableAnimation}]"
+      @contextmenu.prevent="deleteCard">
     <div v-if="title" class="card-title">
       <spawn v-if="!disableTitleHead">#</spawn>
       {{ title }}
@@ -28,7 +30,17 @@ const props = defineProps({
     type: Boolean,
     default: false
   },
+  keepFontBlack: {
+    type: Boolean,
+    default: false
+  }
+  ,
   disableShadow: {
+    type: Boolean,
+    default: false
+  }
+  ,
+  disableAnimation: {
     type: Boolean,
     default: false
   }
@@ -71,11 +83,9 @@ function deleteCard() {
   cursor: pointer;
   transition: .2s;
   width: auto;
-
-  &:hover {
-    transform: scale(1.02);
-  }
+  box-shadow: 0px 0px 10px rgb(228, 228, 228);
 }
+
 
 html.dark {
   .card-style {
@@ -84,11 +94,28 @@ html.dark {
   }
 }
 
-
 .card-title {
   font-weight: 600;
   font-size: 16px;
   color: var(--ep-text-color-primary);
   transition: 0.2s;
+}
+
+.hide-shadow {
+  box-shadow: none;
+}
+
+.font-color {
+  color: black;
+
+  .card-title {
+    color: black;
+  }
+}
+
+.enable-animation {
+  &:hover {
+    transform: scale(1.02);
+  }
 }
 </style>

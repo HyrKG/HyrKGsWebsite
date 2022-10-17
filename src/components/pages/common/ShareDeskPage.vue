@@ -1,6 +1,7 @@
 <template>
-  <flex-container>
-    <card title="🚧 圆桌正在施工中..." style="background-color: var(--comp-light-blue)" disable-shadow>
+  <flex-container style="border: 1px solid red">
+    <card title="🚧 圆桌正在施工中..." style="background-color: var(--comp-light-blue)" disable-shadow keep-font-black
+    >
       你能够使用<u>编号</u>创建或组建圆桌，在圆桌中，你能够自由实时共享文件。
     </card>
   </flex-container>
@@ -11,6 +12,7 @@
 </script>
 
 <style scoped>
+
 
 p {
   line-height: 0.4rem;

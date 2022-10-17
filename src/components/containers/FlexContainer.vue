@@ -1,5 +1,5 @@
 <template>
-  <div class="card-container">
+  <div class="flex-container">
     <slot/>
   </div>
 </template>
@@ -9,7 +9,7 @@ defineProps(['title'])
 </script>
 
 <style scoped lang="scss">
-.card-container {
+.flex-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
