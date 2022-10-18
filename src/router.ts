@@ -12,17 +12,23 @@ const routes = [
     {path: '/', redirect: "/home"},
     {
         path: '/common', alias: "/", component: CommonPage, children: [
-            {path: 'home', component: HomePage},
-            {path: "share-desk", component: ShareDesk},
-            {path: 'doc', component: DocumentPage},
-            {path: "playground", component: PlayGroundPage}
+            {path: 'home', name: "HomePage", component: HomePage},
+            {path: "share-desk", name: "ShareDesk", component: ShareDesk},
+            {path: 'doc', name: "Documents", component: DocumentPage},
+            {path: "playground", name: "Playground", component: PlayGroundPage}
         ]
     },
     // 这是一个singleton页面，对应组件即对应页面。
-    {path: '/about', component: AboutMePage}
+    {path: '/about', name: "About", component: AboutMePage}
 ]
 
 export const router = createRouter({
     history: createWebHistory(),
     routes
+})
+
+router.beforeEach((to, from, next) => {
+    const newTitle = to.name ? String(to.name) : "Web"
+    document.title = "HyrKG's " + newTitle;
+    next()
 })
