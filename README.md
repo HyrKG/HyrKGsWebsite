@@ -8,12 +8,13 @@
 
 # 📃 我的计划 To-do List:
 
+- [ ] Spring后端
 - [ ] 登陆系统（预计使用oauth2）
-- [ ] localStorage & sessionStorage
+  - [ ] localStorage & sessionStorage
+- [ ] 将VitePress嵌入我的网站之中（似乎很有难度）
 - [ ] 大计划！📁圆桌(round-table)
     -  [x] 前端界面
     -  [ ] 长链接，或许是WebSocket？
-    -  [ ] Spring后端
 - [ ] vuex，感觉还是要先学学
 
 # 📗 已完成！ Checked List:
