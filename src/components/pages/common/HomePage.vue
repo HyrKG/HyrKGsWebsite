@@ -11,7 +11,7 @@
   <div class="el-main-right-container">
 
     <grid-container>
-      <card title="📁 边学习边开发 在线文件协同方案" disable-title-head>
+      <card title="📁 研究开发中... 在线文件协同方案" disable-title-head>
         <el-button @click="this.$router.push('/share-desk')">点击前往 圆桌</el-button>
         <template #footer>
           <emoji-box>🤔</emoji-box>

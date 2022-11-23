@@ -24,7 +24,7 @@
 
     <flex-container class="right-container">
       <card class="card_desk" title="🗃️ 工作中圆桌" keep-font-black disable-shadow disable-title-head>
-        似乎没有发现你加入任何圆桌。你可以在左侧选择加入圆桌。
+        似乎没有发现你加入任何圆桌。你可以在加入卡片中加入圆桌。
       </card>
     </flex-container>
   </flex-container>
