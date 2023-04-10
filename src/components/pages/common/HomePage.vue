@@ -11,23 +11,23 @@
   <div class="el-main-right-container">
 
     <grid-container>
-      <card title="📁 研究开发中... 在线文件协同方案" disable-title-head>
-        <el-button @click="this.$router.push('/share-desk')">点击前往 圆桌</el-button>
-        <template #footer>
-          <emoji-box>🤔</emoji-box>
-          <emoji-box>✊</emoji-box>
-          <emoji-box>🧑‍💻</emoji-box>
-        </template>
-      </card>
+<!--      <card title="📁 研究开发中... 在线文件协同方案" disable-title-head>-->
+<!--        <el-button @click="this.$router.push('/share-desk')">点击前往 圆桌</el-button>-->
+<!--        <template #footer>-->
+<!--          <emoji-box>🤔</emoji-box>-->
+<!--          <emoji-box>✊</emoji-box>-->
+<!--          <emoji-box>🧑‍💻</emoji-box>-->
+<!--        </template>-->
+<!--      </card>-->
 
-      <card title="🔮 魔法、特效，好玩东西的试验场。" disable-title-head>
-        <el-button @click="this.$router.push('/playground')">点击前往 游乐场</el-button>
-        <template #footer>
-          <emoji-box>💬</emoji-box>
-          <emoji-box>😇</emoji-box>
-          <emoji-box>🧙</emoji-box>
-        </template>
-      </card>
+<!--      <card title="🔮 魔法、特效，好玩东西的试验场。" disable-title-head>-->
+<!--        <el-button @click="this.$router.push('/playground')">点击前往 游乐场</el-button>-->
+<!--        <template #footer>-->
+<!--          <emoji-box>💬</emoji-box>-->
+<!--          <emoji-box>😇</emoji-box>-->
+<!--          <emoji-box>🧙</emoji-box>-->
+<!--        </template>-->
+<!--      </card>-->
 
       <card title="色彩街头 / Alex Webb">
         <img class="autofix smooth-border" src="/src/assets/alexwebb_img1.png"/>
